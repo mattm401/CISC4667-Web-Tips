@@ -1,4 +1,4 @@
-# CISC4667: WebTips
+# CISC4/667(-011): WebTips
 This repository contains helpful script examples used in CISC 4/667-011 (Computing for Social Good) at the University of Delaware. 
 
 ## setup_script.py 
