@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+<p>Hello, World!</p>
+<hr />
+<h3>State:</h3>
+<pre id="json"></pre>
+
+<script type="text/javascript">
+
+	function GetStatus()
+	{
+    	$(function() {
+
+			 $.ajax({
+				type: 'GET',
+  				dataType: 'json',
+				url: '/api/v1/status/',
+				success: function (data)
+				{
+					message = data['message']
+					document.getElementById("json").innerHTML = "<br />API Status: " + message + "";
+
+				}
+			 });
+		})
+	}
+
+	$(document).ready(function() {
+		GetStatus();
+		setInterval( GetStatus, 8000 );
+	});
+
+</script>
+</body>
+</html>
