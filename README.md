@@ -11,4 +11,4 @@ A Python script that extends SimpleHTTPServer and establishes a server that will
 A Python script example of a GET request.
 
 ## index.html
-A JavaScript / JQuery page that will render the response from server.py to a GET request dynamically every 8 seconds.
+A JavaScript / JQuery page that will render the response from server.py after a GET request dynamically every 8 seconds.
