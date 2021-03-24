@@ -5,7 +5,7 @@ This repository contains helpful script examples used in CISC 4/667-011 (Computi
 A Python script that will establish a simple SQLite database with a table and perform an insertion in the directory it is run in.
 
 ## server.py
-A Python script that extends SimpleHTTPServer and establishes a server that will dynamically assign port numbers when executed and respond to specific GET requests. The service will function off the domain level URL using the port specified or 8080 if not. You must be using the VPN to access the service and you must ensure the service is running on the machine before it will be accessible.
+A Python script that extends SimpleHTTPServer and establishes a server that will dynamically assign port numbers when executed and respond to specific GET requests (that you define thus creating your own API). The service will function off the domain level URL using the port specified or 8080 if not. You must be using the VPN to access the service and you must ensure the service is running on the machine before it will be accessible.
 
 ## ping.py
 A Python script example of a GET request.
