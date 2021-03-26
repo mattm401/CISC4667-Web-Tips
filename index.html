@@ -11,8 +11,28 @@
 <hr />
 <h3>State:</h3>
 <pre id="json"></pre>
+<hr />
+<h3>Add Record:</h3>
+<input type="hidden" id="message" value="This is a test from the form"/>
+<button type="submit" id="button" value="Submit">Add Record</button>
 
 <script type="text/javascript">
+    $("#button").click(function(e) {
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/",
+          data: JSON.stringify({
+            message: $("#message").val(),
+          }),
+          success: [function() {
+            alert('Record Inserted');
+          }],
+          error: [function() {
+            alert('Error Returned');
+          }]
+        });
+    });
 
 	function GetStatus()
 	{
@@ -20,14 +40,13 @@
 
 			 $.ajax({
 				type: 'GET',
-  				dataType: 'json',
 				url: '/api/v1/status/',
-				success: function (data)
-				{
-					message = data['message']
-					document.getElementById("json").innerHTML = "<br />API Status: " + message + "";
-
-				}
+				success: [
+				    function (data) {
+                        let message = data['message'];
+                        document.getElementById("json").innerHTML = "<br />API Status: " + message + "";
+				    }
+				]
 			 });
 		})
 	}
