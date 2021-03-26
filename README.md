@@ -5,10 +5,10 @@ This repository contains helpful script examples used in CISC 4/667-011 (Computi
 A Python script that will establish a simple SQLite database with a table and performs an insertion in the directory it is run in. The table, called Log, has an auto incrementing id field and a varchar message field for string text---similar to perhaps an application log table. 
 
 ## server.py
-A Python script that extends SimpleHTTPServer and establishes a server that will dynamically assign port numbers when executed and respond to specific GET requests (that you define thus creating your own API). The service will function off the domain level URL using the port specified or 8080 if not. You must be using the VPN to access the service and you must ensure the service is running on the machine before accessing the server.
+A Python script that extends SimpleHTTPServer and establishes a server that will dynamically assign port numbers when executed and respond to specific GET requests (that you define thus creating your own API). Server will also response to a POST request contained a "message" field that is inserted into the sample database's Log table. The service will function off the domain level URL using the port specified or 8080 if not. You must be using the VPN to access the service and you must ensure the service is running on the machine before accessing the server.
 
 ## ping.py
-A Python script example of a GET request.
+A Python script example of both GET and POST requests.
 
 ## index.html
-A JavaScript / JQuery page that will render the response from server.py after a GET request dynamically every 8 seconds.
+A JavaScript / JQuery page that will render the response from server.py after a GET request dynamically every 8 seconds. Clicking on the HTML button will fire a POST request with a message contained in a hidden form field.
